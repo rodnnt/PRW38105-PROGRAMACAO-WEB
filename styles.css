@@ -1,0 +1,119 @@
+/* estilo global */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; /* fonte */
+    background-color: #ecefff; /* fundo */
+}
+
+.card-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+header h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #ffffff; /* Cor do texto */
+}
+
+.lead {
+    font-size: 14px;
+    color: #c2c1c1;
+    margin: 0;
+}
+
+/* container seções */
+.container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    border-radius: 8px;
+}
+/* espaço entre container */
+.container div {
+    margin-bottom: 20px;
+}
+
+/* rodapé */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* botão ao topo */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+    background-color: #343a40;
+    color: white;
+    border: none;
+}
+#backToTop:hover {
+    background-color: #000408; /* cor do botão ao passar o mouse */
+    color: #f8f9fa; /* cor do texto ao passar o mouse */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px; /* margem superior da tabela */
+    table-layout: fixed;
+    max-width: 100%;
+}
+td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* galeria de imagens */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
+    gap: 15px;
+    justify-items: center;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.imagem {
+    width: 100%; /* ocupa 100% da coluna */
+    height: 120px; /* altura fixa */
+    overflow: hidden; /* esconde parte da imagem que ultrapassar */
+    display: flex; /* centraliza a imagem */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+/*destaque com mouse */
+.imagem:hover {
+    transform: scale(1.05); /* zoom ao passar o mouse */
+}
+
+img {
+    min-width: 100%; /* Garante que a imagem preencha a largura */
+    min-height: 100%; /* Garante que a imagem preencha a altura */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorção */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: none;
+}
+
+.custom-col {
+    flex: 0 0 20%;
+    max-width: 20%;/
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+}
