@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula05 - task01</title>
+</head>
+
+<body>
 <?php
 // criando a classe invoice para representar uma venda
 class Invoice {
@@ -33,28 +43,28 @@ class Invoice {
 
     // criando setters e getters
     
-    public function setCodItem() {
+    public function setCodItem($codItem) {
         $this->codItem;        
     }
     public function getCodItem() {
         return $this->codItem;        
     }
 
-    public function setdscItem() {
+    public function setdscItem($dscItem) {
         $this->dscItem;        
     }
     public function getdscItem() {
         return $this->dscItem;        
     }
 
-    public function setqtdItem() {
+    public function setqtdItem($qtdItem) {
         $this->qtdItem;        
     }
     public function getqtdItem() {
         return $this->qtdItem;        
     }
 
-    public function setCvlrItem() {
+    public function setCvlrItem($vlrItem) {
         $this->vlrItem;        
     }
     public function getvlrItem() {
@@ -66,4 +76,11 @@ class Invoice {
         return $this->qtdItem * $this->vlrItem;
     }
 }
+
+
+// impressão teste para validação
+$invoice = new Invoice(1, "Mouse", 2, 50.00);
+echo "Valor da Fatura: R$ " . $invoice->getInvoiceAmount();
 ?>
+</body>
+</html>
