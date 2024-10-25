@@ -12,6 +12,8 @@ O projeto visa desenvolver um website funcional e responsivo, que apresente os r
 
 - `aula04/`: Aqui estão as atividades que envolvem a criação de um formulário simples em HTML. Foram aplicados estilos com Bootstrap e desenvolvido um script PHP para processar os dados enviados pelo formulário, permitindo que o PHP devolvesse as informações ao front-end.
 
+- `aula05/`: Nesta pasta, foram desenvolvidas atividades relacionadas à programação orientada a objetos em PHP, incluindo classes, heranças e métodos.
+
 ## Tecnologias Utilizadas
 
 - HTML5
