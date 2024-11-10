@@ -1,5 +1,5 @@
 <?php
-    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula07/src/actions/produto.php';
+    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/produto.php';
 
     $produto = [];
 
