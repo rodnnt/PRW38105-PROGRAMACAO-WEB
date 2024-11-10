@@ -5,11 +5,7 @@
 
     if(isset($_GET['id_produto'])){
         $id_produto = $_GET['id_produto'];
-
-        echo  $id_produto ;
-
         $produto = consultarProdutoById($id_produto);
-        echo $produto['descricao'];
     }
 ?>
 
