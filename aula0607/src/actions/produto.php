@@ -1,4 +1,7 @@
 <?php
+    if(session_status() == PHP_SESSION_NONE){
+        session_start();
+    }
     require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/conexao.php';    
     require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/database/produto.php';
     
@@ -23,20 +26,43 @@
         if(isset($_POST['inserir'])){
 
             if(cadastrarProdutoBD($conexao, $nome, $descricao, $quantidade, $preco)){
-              header('location:../pages/produto/listarProduto.php');  
+                $_SESSION['mensagem'] = 'Produto cadastrado com sucesso';
+                $_SESSION['acao_sucesso'] = true;
+                header('location:../pages/produto/listarProduto.php');
+                exit();
+            } else {
+                $_SESSION['mensagem'] = 'Erro ao tentar cadastrar produtos';
+                $_SESSION['acao_sucesso'] = False;
+                header('location:../pages/produto/listarProduto.php');  
+                exit();
             }
 
         } else if(isset($_POST['editar'])){
 
             if(editarProdutoBD($conexao, $id_produto, $nome, $descricao, $quantidade, $preco)){
-              header('location:../pages/produto/listarProduto.php');  
-            }
+                $_SESSION['mensagem'] = 'Produto alterado com sucesso';
+                $_SESSION['acao_sucesso'] = true;
+                header('location:../pages/produto/listarProduto.php');
+
+            } else {
+                $_SESSION['mensagem'] = 'Erro ao tentar alterar o produto';
+                $_SESSION['acao_sucesso'] = False;
+                header('location:../pages/produto/listarProduto.php');  
+                exit();
+              }
 
         } else if(isset($_POST['excluir'])){
-            echo 'TESTE';
+            
             if(excluirProdutoBD($conexao, $id_produto)){
-                echo $id_produto;
+                $_SESSION['mensagem'] = 'Produto deletado com sucesso';
+                $_SESSION['acao_sucesso'] = true;
                 header('location:../pages/produto/listarProduto.php');  
+                exit();
+            } else {
+                $_SESSION['mensagem'] = 'Erro ao tentar deletar o produto';
+                $_SESSION['acao_sucesso'] = False;
+                header('location:../pages/produto/listarProduto.php');  
+                exit();
             }
         }
     }

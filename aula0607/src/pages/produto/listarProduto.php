@@ -1,4 +1,8 @@
 <?php
+    if(session_status() == PHP_SESSION_NONE){
+        session_start();
+    }
+    
     require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/produto.php';
 
     $listaProdutos = consultarProdutos();
@@ -30,6 +34,10 @@
                     <i class="bi bi-plus-square"></i>
                     <span>Novo Produto</span>
                 </a>
+            </div>
+
+            <div class="w -100">
+                <?php include('../../../mensagem.php')?>
             </div>
 
             <div class="row">
