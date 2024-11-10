@@ -1,7 +1,7 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula07/conexao.php';    
-    require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula07/src/database/produto.php';
-   
+    require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/conexao.php';    
+    require $_SERVER['DOCUMENT_ROOT'] .'/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/database/produto.php';
+    
     function consultarProdutos(){
         global $conexao;
         return consultarProdutosBD($conexao);
