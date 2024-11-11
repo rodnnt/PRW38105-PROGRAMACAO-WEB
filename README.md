@@ -14,7 +14,7 @@ O projeto visa desenvolver um website funcional e responsivo, que apresente os r
 
 - `aula05/`: Nesta pasta, foram desenvolvidas atividades relacionadas à programação orientada a objetos em PHP, incluindo classes, heranças e métodos.
 
-- `aula0607/`: Contém atividades que abordam a conexão com o banco de dados utilizando PHP e MySQLi. Nesta pasta, são apresentados scripts para inserir, atualizar, listar e deletar registros em um banco de dados. Além disso, as atividades se concentram na aplicação das funções desenvolvidas para criar uma aplicação web que interage com o banco de dados, implementando um CRUD (Criar, Ler, Atualizar e Deletar) completo.
+- `comercio/`: Contém atividades que abordam a conexão com o banco de dados utilizando PHP e MySQLi. Nesta pasta, atividades que se concentram na aplicação das funções desenvolvidas para criar uma aplicação web que interage com o banco de dados, implementando um CRUD (Criar, Ler, Atualizar e Deletar). Temos um comércio com produtos, categoria de produtos e usuários.
 
 ## Tecnologias Utilizadas
 
