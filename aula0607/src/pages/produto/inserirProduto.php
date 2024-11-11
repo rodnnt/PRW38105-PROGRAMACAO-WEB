@@ -1,3 +1,8 @@
+<?php
+    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/categoria.php';
+    $listaCategorias = consultarCategorias();
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -46,6 +51,18 @@
                     <label for="preco">Preço Produto:</label>
                     <input type="number" class="form-control" name="preco" id="preco" placeholder="0.00" step="0.01"
                         min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="id_categoria">Categoria:</label>
+                    <select class="form-control" name="id_categoria" id="id_categoria">
+                        <option selected>Selecione a categoria</option>
+                        <?php foreach($listaCategorias as $categoria) { ?>
+                            <option value="<?php echo $categoria['id_categoria']; ?>">
+                                <?php echo $categoria['nome']; ?>
+                            </option>
+                        <?php } ?>
+                    </select>
                 </div>
 
                 <div class="form-group">

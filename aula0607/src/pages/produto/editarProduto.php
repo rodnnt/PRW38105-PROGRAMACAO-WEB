@@ -1,12 +1,14 @@
 <?php
     require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/produto.php';
-
     $produto = [];
 
     if(isset($_GET['id_produto'])){
         $id_produto = $_GET['id_produto'];
         $produto = consultarProdutoById($id_produto);
     }
+
+    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/categoria.php';
+    $listaCategorias = consultarCategorias();
 ?>
 
 <!doctype html>
@@ -64,6 +66,19 @@
                     <label for="preco">Preço Produto:</label>
                     <input type="number" class="form-control" name="preco" id="preco" step="0.01" min="0"
                     value=<?php echo $produto['preco']?>>
+                </div>
+
+                <div class="form-group">
+                    <label for="id_categoria">Categoria:</label>
+                    <select class="form-control" name="id_categoria" id="id_categoria">
+                        <option selected>Selecionar</option>
+                        <?php foreach($listaCategorias as $categoria) { ?>
+                            <option value="<?php echo $categoria['id_categoria']; ?>"
+                                <?php echo ($produto['id_categoria'] == $categoria['id_categoria']) ? 'selected' : ''; ?>>
+                                <?php echo $categoria['nome']; ?>
+                            </option>
+                        <?php } ?>
+                    </select>
                 </div>
 
                 <div class="form-group">

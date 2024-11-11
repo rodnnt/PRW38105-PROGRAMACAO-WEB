@@ -4,6 +4,7 @@
     }
     
     require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/produto.php';
+    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/categoria.php';
 
     $listaProdutos = consultarProdutos();
 ?>
@@ -51,6 +52,7 @@
                             <th>QUANTIDADE</th>
                             <th>PREÇO</th>
                             <th>DATA DE REGISTRO</th>
+                            <th>CATEGORIA</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +63,8 @@
                                 <td> <?php echo $produto['descricao'] ?> </td>
                                 <td> <?php echo $produto['quantidade'] ?> </td>
                                 <td> <?php echo $produto['preco'] ?> </td>
-                                <td> <?php echo $produto['data_registro'] ?> </td> 
+                                <td> <?php echo $produto['data_registro'] ?> </td>
+                                <td> <?php echo $produto['nome_categoria']; ?> </td>
                                 <td>
                                     <a class='btn btn-primary' href="./editarProduto.php?id_produto=<?php echo $produto['id_produto'] ?>">
                                             <i class='bi bi-pencil-square'></i></a>   
