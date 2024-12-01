@@ -1,4 +1,8 @@
 <?php
+    if ( session_status() == PHP_SESSION_NONE ) {
+        session_start();
+    }
+    
     require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/categoria.php';
     $listaCategorias = consultarCategorias();
 ?>

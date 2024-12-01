@@ -1,8 +1,10 @@
 <?php
-    require 'C:/xampp/htdocs/inicial/PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/usuario.php';
+    require '../PRW38105-PROGRAMACAO-WEB/aula0607/src/actions/usuario.php';
 
-    $usuario = [];
-
+    if ( session_status() == PHP_SESSION_NONE ) {
+        session_start();
+    }
+    
     if(isset($_GET['id_usuario'])){
         $id_usuario = $_GET['id_usuario'];
         $usuario = consultarUsuarioById($id_usuario);
