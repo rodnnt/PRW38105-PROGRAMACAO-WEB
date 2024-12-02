@@ -1,0 +1,32 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.pt-social-media{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.social-media{
+    display: flex;
+    gap:15px;
+}
+
+.pt-items-footer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pt-items-footer ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+}

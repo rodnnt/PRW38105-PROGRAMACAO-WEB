@@ -1,0 +1,29 @@
+*{
+    --primary-color: #335eea;
+}
+
+.main-text{
+   
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+
+.main-title span{
+    color: var(--primary-color);
+}
+
+.main-img{
+   
+    width: 50%;
+}
+
+.main-img img{
+    width: 100%;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+}
+

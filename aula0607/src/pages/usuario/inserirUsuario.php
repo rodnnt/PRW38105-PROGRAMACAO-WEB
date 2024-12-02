@@ -41,6 +41,19 @@
                     <input type="email" class="form-control" name="email" id="email" placeholder="Informe o e-mail do usuário">
                 </div>
 
+                <div class='form-group'>
+                    <label for='senha'>Senha:</label>
+                    <input type='password' class="form-control <?php echo isset($_GET['erro']) ? 'erro' : '';?>"
+                        name='senha' id='senha' placeholder='Informe sua senha' value='123456'>
+                </div>
+
+                <div class='form-group'>
+                    <label for='confirmar-senha'>Confirmação de senha:</label>
+                    <input type='password' class="form-control <?php echo isset($_GET['erro']) ? 'erro' : '';?>"
+                        name='confirmar-senha' id='confirmar-senha' placeholder='Informe novamente sua senha'
+                        value='123456'>
+                </div>
+
                 <div class="form-group">
                     <label for="telefone">Telefone do Usuário:</label>
                     <input type="text" class="form-control" name="telefone" id="telefone"
